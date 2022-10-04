@@ -16,16 +16,17 @@
 
         </h1>
     </header>
-    <nav>
+    <nav class="">
         <ul>
-            <li><a href="<?=\core\Route::url('main')?>">Главная</a></li>
-            <li><a href="<?=\core\Route::url('contacts')?>">Контакты</a></li>
-            <li><a href="<?=\core\Route::url('about')?>">О нас</a></li>
+            <li><a <?=$this->setActiveStyleInNavBar('main-page', $page)?>  href="<?=\core\Route::url('main')?>">Главная</a></li>
+            <li><a <?=$this->setActiveStyleInNavBar('contacts-page', $page)?> href="<?=\core\Route::url('contacts')?>">Контакты</a></li>
+            <li><a <?=$this->setActiveStyleInNavBar('about-page', $page)?> href="<?=\core\Route::url('about')?>">О нас</a></li>
         </ul>
+
     </nav>
 
-
     <main>
+
         <?php include_once 'app/resource/views/pages/'.$page.'.php'?>
     </main>
 
