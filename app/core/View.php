@@ -12,4 +12,11 @@ class View
 
         include_once 'app/resource/views/templates/' . $template . '.php';
     }
+
+    public function setActiveStyleInNavBar(string $pageName, string $currentPage){
+        if ($pageName==$currentPage){
+            return 'id ="active-page"';
+        } else
+        return '';
+    }
 }
